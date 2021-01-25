@@ -55,6 +55,7 @@ body {
     height: 800px;
     position: relative;
     background-position: center;
+    background-size: cover;
     padding: 2rem 0 0;
 }
 
@@ -182,14 +183,4 @@ body {
     margin-top: -10px;
     line-height: 1.6;
     margin-bottom: 100px;
-}
-
-@media only screen and (min-width: 481px) and (max-width:767px ) {
-    .body {
-        font-size: 80%;
-    }
-
-    .container {
-        max-width: 90%;
-    }
 }
