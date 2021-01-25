@@ -44,7 +44,7 @@ body {
 .header {
     background-image: url(./images/headphones_hero_1.jpg);
     background-repeat: no-repeat;
-    height: 800px;
+    height: 869px;
     position: relative;
     background-position: center;
     background-size: cover;
@@ -52,7 +52,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -61,6 +61,7 @@ body {
 .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .nav {
@@ -102,7 +103,7 @@ body {
 }
 
 .paragraph {
-    margin-top: -20px;
+    margin-top: -10px;
     font-family: 'SourceSemibold';
     font-size: 20px;
 }
@@ -128,11 +129,62 @@ body {
 }
 
 .paragraph-one  {
-    max-width: 80%;
+    /* max-width: 80%; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     font-family: 'SourceRegular';
     line-height: 1.6;
     font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .nav li {
+        margin: 0 0 3rem 3rem;
+      }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    .navicon {
+        background: white;
+        display: block;
+        width: 1.5rem;
+        height: 0.2rem;
+        position: relative;
+        transition: background 0.2s ease-out;
+        margin-left: 2rem;
+    }
+
+    .navicon::before,
+    .navicon::after {
+      content: '';
+      display: block;
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      background: white;
+      /* transition: all 0.2s ease-out; */
+    }
+
+    .navicon::before {
+        top: 0.7rem;
+    }
+    
+    .navicon::after {
+        top: -0.7rem;
+    }
+      
 }
